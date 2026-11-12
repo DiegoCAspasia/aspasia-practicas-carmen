@@ -1,0 +1,126 @@
+/* Estilos generales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f5f8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+main{
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #245b83;
+}
+
+.intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Área de texto */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    resize: vertical;
+}
+
+/* Controles */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 15px;
+    margin: 20px 0;
+}
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+button {
+    padding: 11px 18px;
+    background: #287a58;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+button:hover {
+    background-color: #19583e;
+}
+
+/* Tarjetas de resultados */
+h2 { 
+   color: #245b83;
+   margin-top: 30px;
+}
+.results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.metric {
+    background-color: #eaf2f8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+.metric h3 {
+    font-size: 15px;
+    color: #245b83;
+}
+.metric p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #287a58;
+    margin-bottom: 5px;
+}
+
+/* Mensaje de estado */
+.status {
+    color: #287a58;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px){
+    main {
+        padding: 18px;
+    }
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    select, button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
