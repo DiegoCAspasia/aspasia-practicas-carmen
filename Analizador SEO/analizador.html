@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Herramienta para analizar palabras clave y densidad SEO">
+    <title>Analizador SEO de textos</title>
+
+    <!--Enlace al CSS-->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!--Enlade a los archivos de JavaScript-->
+    <script src="utilidades.js" defer></script>
+    <script src="funciones.js" defer></script>
+</head>
+<body>
+     <main>
+        <h1>Analizador SEO de textos</h1>
+        <p class="intro">
+           Analiza las keyword y descubre los términos más repetidos.
+        </p>
+
+        <!--Lugar para escribir o pegar el texto-->
+        <section>
+          <label for="texto">Introduce o pega tu texto:</label>
+          <textarea id="texto" placeholder="Escribe o pega aquí tu texto...."></textarea>
+        </section>
+
+        <!--Palabras clave-->
+        <section>
+          <label for="keyword">Introduce las palabras clave separadas por comas:</label>
+          <input type="text" id="keywords" placeholder="Ejemplo: curso de inglés online, formación profesional">
+        </section>
+
+        <!--Configuración de densidad-->
+        <section class="configuración">
+         <div>
+            <label for="minimo">Densidad mínima (%):</label>
+            <input type="number" id="minimo" value="0.5" min="0" step="0.1">
+         </div>
+         <div>
+            <label for="maximo">Densidad maxima (%):</label>
+            <input type="number" id="maximo" value="2.5" min="0" step="0.1">
+         </div>
+        </section>
+
+        <!--Botón para analizar-->
+        <button type="button" id="analizar">Analizar texto</button>
+
+        <!--Resultados de las palabras clave-->
+        <section>
+         <h2>Densidad de palabras clave</h2>
+         <table id="tablaKeywords">
+            <thead>
+               <tr>
+                  <th><button class="ordenar" data-columna="0">Palabra clave</button></th>
+                  <th><button class="ordenar" data-columna="1">Apariciones</button></th>
+                  <th><button class="ordenar" data-columna="2">Densidad (%)</button></th>
+                  <th>Estado</th>
+               </tr>
+            </thead>
+            <tbody id="resultadoKeywords"></tbody>
+         </table>
+        </section>
+        <!--Tabla de palabras más repetidas-->
+        <section>
+         <h2>Las 20 palabras más repetidas</h2>
+         <table id="tablaPalabras">
+            <thead>
+               <tr>
+                  <th><button class="ordenar" data-columna="0">Palabra</button></th>
+                  <th><button class="ordenar" data-columna="1">Repeticiones</button></th>
+               </tr>
+            </thead>
+            <tbody id="resultadoPalabras"></tbody>
+         </table>
+        </section>
+
+        <!--Tabla de combinaciones de dos palabras-->
+        <section>
+         <h2>Las 10 combinaciones de dos palabras</h2>
+         <table id="tablaBigramas">
+            <thead>
+               <tr>
+                  <th><button class="ordenar" data-columna="0">Combinación</button></th>
+                  <th><button class="ordenar" data-columna="1">Repeticiones</button></th> 
+               </tr>
+            </thead>
+            <tbody id="resultadoBigramas"></tbody>
+         </table>
+        </section>
+        <!--Tabla de combinaciones de tres palabras-->
+         <section>
+         <h2>Las 10 combinaciones de tres palabras</h2>
+         <table id="tablaTrigramas">
+            <thead>
+               <tr>
+                  <th><button class="ordenar" data-columna="0">Combinación</button></th>
+                  <th><button class="ordenar" data-columna="1">Repeticiones</button></th> 
+               </tr>
+            </thead>
+            <tbody id="resultadoTrigramas"></tbody>
+         </table>
+        </section>
+
+        <!--Mensaje de información-->
+        <p id="estado" role="status"></p>
+    </main>
+</body>
+</html>
