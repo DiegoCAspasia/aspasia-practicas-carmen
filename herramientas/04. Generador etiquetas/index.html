@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de tarjetas sociales</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <h1>Generador de tarjetas para redes sociales</h1>
+        <p class="intro">
+            Introduce los datos de tu página y comprueba como se verá
+            cuando compartas el enlace en redes sociales.
+        </p>
+
+        <!--Formulario-->
+        <form id="formulario">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" required placeholder="Escribe el título">
+
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" required placeholder="Escribe una descripción"></textarea>
+            
+            <label for="url">URL de la página</label>
+            <input type="url" id="url" required placeholder="https://www.ejemplo.com">
+
+            <label for="sitio">Nombre del sitio:</label>
+            <input type="text" id="sitio" required placeholder="Nombre de tu página web">
+
+            <label for="tipo">Tipo de contenido</label>
+            <select id="tipo">
+                <option value="website">Web</option>
+                <option value="article">Artículo</option>
+            </select>
+            
+            <label for="imagen">Seleccionar imagen:</label>
+            <input type="file" id="imagen" accept="image/*">
+
+            <p id="avisoImagen" class="status">
+                Selecciona una imagen para comprobar sus dimensiones.
+            </p>
+
+            <button type="submit">Generar vista previa</button>
+        </form>
+
+        <!--Vista Previa-->
+        <h2>Vista previa en redes sociales</h2>
+        <section class="redes">
+            <div class="tarjeta">
+                <h3>Facebook</h3>
+                <img id="imgFacebook" alt="Imagen de Facebook">
+                <div class="contenido">
+                    <small id="urlFacebook">www.ejemplo.com</small>
+                    <h4 id="tituloFacebook">Título de la publicación</h4>
+                    <p id="descFacebook">Aquí aparecerá la descripción.</p>
+                </div>          
+            </div>
+
+            <div class="tarjeta tarjeta-x">
+                <h3>X / Twitter</h3>
+                <img id="imgTwitter" alt="Imagen de Twitter">
+                <div class="contenido">
+                    <small id="urlTwitter">www.ejemplo.com</small>
+                    <h4 id="tituloTwitter">Título de la publicación</h4>
+                    <p id="descTwitter">Aquí aparecerá la descripción</p>    
+                </div>
+            </div>
+
+            <div class="tarjeta tarjeta-linkedln">
+                <h3>Linkedln</h3>
+                <img id="imgLinkedln" alt="Imagen de Linkedln">
+                <div class="contenido">
+                    <small id="urlLinkedln">www.ejemplo.com</small>
+                    <h4 id="tituloLinkedln">Título de la publicación</h4>
+                    <p id="descLinkedln">Aquí aparecerá la descripción</p>    
+                </div>
+            </div>
+        </section>
+
+        <!--Código generado-->
+        <h2>Etiquetas Meta</h2>
+        <p class="intro">Copia este código y colócalo dentro de la etiqueta
+            &lt;head&gt; de tu documento HTML.
+        </p>
+
+        <textarea id="codigoMeta" readonly placeholder="Aquí aparecerán las etiquetas Meta"></textarea>
+        <button type="button" id="copiar">Copiar etiquetas</button>
+        <p id="estado" class="status"></p>
+    </main>
+
+    <!--Enlaces a JavaScript-->
+    <script type="module" src="script.js"></script>
+    
+    
+</body>
+</html>

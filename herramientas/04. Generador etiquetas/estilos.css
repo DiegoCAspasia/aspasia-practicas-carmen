@@ -1,0 +1,101 @@
+/* Campos del formulario */
+input[type="text"],
+input[type="url"],
+input[type="file"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* Separación de los controles */
+form select {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+/* Botones */
+form button,
+#copiar {
+    margin-top: 10px;
+}
+
+/* Contenedor de las tres redes */
+.redes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Tarjetas */
+.tarjeta {
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    overflow: hidden;
+    background-color: white;
+    min-width: 0;
+}
+.tarjeta h3 {
+    background-color: #eaf2f8;
+    color: #245b83;
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+}
+.tarjeta img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.91 / 1;
+    object-fit: cover;
+    background-color: #e5e5e5;
+}
+.contenido {
+    padding: 12px;
+    overflow-wrap: anywhere;
+}
+.contenido small {
+    color: #666;
+    font-size: 11px;
+}
+.contenido h4 {
+    margin: 8px 0;
+    color: #222;
+    font-size: 16px;
+}
+.contenido p {
+    color:#666;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+/* Diferencias visuales de cada red */
+.tarjeta-x {
+    border-radius: 12px;
+}
+.tarjeta-x .contenido {
+    background-color: #f8f8f8;
+}
+.tarjeta.linkeln {
+    border-radius: 5px;
+}
+
+/* Área del código generado */
+#codigoMeta {
+    height: 260px;
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 13px;
+    background-color: #f7f7f7;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 700p) {
+    .redes {
+        grid-template-columns: 1fr;
+    }
+}

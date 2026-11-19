@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de resultados Google</title>
+
+    <!--Enlace al CSS-->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Simulador de resultados de Google</h1>
+    <p>Comprueba cómo aparecen tu título y descripción en los resultados de búsqueda</p>
+    <div class="contenedor">
+
+        <!--Campo del título-->
+        <label for="titulo">Título SEO</label>
+        <input type="text" id="titulo" placeholder="Escribe el título de tu página">
+        <div class="barra">
+            <div id="progresoTitulo"></div>
+        </div>
+        <p id="contadorTitulo">0 px</p>
+
+        <!--Campo de la URL-->
+        <label for="url">URL:</label>
+        <input type="text" id="url" placeholder="www.ejemplo.com">
+
+        <!--Campo de la descripción-->
+        <label for="descripcion">Meta descripcion:</label>
+        <textarea id="descripcion" placeholder="Escribe la descripción de tu página"></textarea>
+        <div class="barra">
+            <div id="progresoDescripcion"></div>
+        </div> 
+           <p id="contadorDescripcion">0 px</p>
+            
+        <!--Pestañas de visualización-->
+        <div class="pestanas">
+            <button id="escritorio" class="activo">Escritorio</button>
+            <button id="movil">Móvil</button>
+        </div>
+
+        <!--Simulación de Google-->
+        <div class="resultado">
+          <div class="ruta" id="vistaUrl">www.ejemplo.com</div>
+        </div>
+          <div class="tituloGoogle" id="vistaTitulo">Aquí aparecerá el título</div>
+
+            <!--Descripción-->
+            <div class="descripcionGoogle" id="vistaDescripcion">
+                Aquí aparecerá la descripción de tu página.
+            </div>
+        </div>     
+    </div>
+</body>
+
+<!--Enlace a los archivos JavaScript-->
+<script src="funciones.js" type="module" defer></script>
+</html>

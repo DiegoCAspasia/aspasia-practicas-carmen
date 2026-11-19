@@ -1,0 +1,112 @@
+body > p {
+    text-align: center;
+    color: #666;
+}
+.contenedor {
+    background-color: white;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+label {
+    margin-top: 20px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+textarea {
+    height: 90px;
+}
+
+/* Barras de progreso */
+.barra {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+.barra div {
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    border-radius: 5px;
+}
+#contadorTitulo, #contadorDescripcion {
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+}
+
+/* Pestañas */
+.pestanas {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+.pestanas button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.pestanas button.activo {
+    background-color: #4285f4;
+    color: white;
+}
+
+/* Título de Google*/
+.tituloGoogle {
+    color: #1a0dab;
+    font-size: 20px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Descripción */
+.descripcionGoogle {
+    color: #4d5156;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Resultado de Google */
+.resultado {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    transition: max-width 0.3s;
+}
+.ruta {
+    color: #202124;
+    font-size: 14px;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+}
+.tituloGoogle {
+    color: #1a0dab;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.descripcionGoogle {
+    color: #4d5156;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Vista móvil */
+.resultado.movil {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
