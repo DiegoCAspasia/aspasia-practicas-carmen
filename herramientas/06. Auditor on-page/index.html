@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion" content="Herramienta gratuita para analizar 
+    elementos SEO de una página web">
+    <title>Auditoría SEO básica</title>
+
+    <!--Enlace al archivo CSS-->
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+    <main>
+        <h1>Auditoría SEO básica</h1>
+        <p class="intro">Analiza los elementos SEO de una página web 
+            pegando su código fuente HTML.</p>
+        
+    <!--Datos de la página-->
+    <section class="entrada">
+        <h2>Datos de la página web</h2>
+
+        <label for="dominio">Dominio de la página:</label>
+        <input type="text" id="dominio" placeholder="https://www.ejemplo.com">
+
+        <label for="codigoHTML">Código fuente HTML:</label>
+        <textarea id="codigoHTML" placeholder="Pega aquí el código fuente HTML de la 
+              página...">
+        </textarea>
+        <button type="button" id="analizar">Analizar página</button>
+    </section>
+
+    <!--Aquí aparecerá el informe SEO-->
+    <section id="informe" aria-live="polite">
+        <h2>Informe SEO</h2>
+        <p id="mensaje">Pega el código fuente de una página web y pulsa Analizar página.
+        </p>  
+    </section>
+    </main>
+
+    <!--Enlace al archivo JavaScript-->
+    <script type="module" src="script.js"></script>
+    <script type="module" src="../../js/utilidades.js"></script>
+    
+</body>
+</html>

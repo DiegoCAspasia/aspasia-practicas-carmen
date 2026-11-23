@@ -1,0 +1,121 @@
+/* Botones de herramientas */
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.botones button {
+    margin: 0;
+}
+
+/* Opción del índice */
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.opcion input {
+    width: auto;
+}
+
+/* Bloques del editor */
+#listaBloques {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.bloque {
+    background-color: #eaf2f8;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccdce8;
+}
+.bloque h3 {
+    color: #245b83;
+    margin-top: 0;
+}
+.bloque input,
+.bloque textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.bloque textarea {
+    height: 90px;
+}
+
+/* Botones de cada bloque */
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.acciones button {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* Vista previa */
+#vistaPrevia {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 150px;
+    overflow-wrap: anywhere;
+}
+#vistaPrevia img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Código HTML */
+#codigoHTML {
+    height: 300px;
+    font-family: monospace;
+    font-size: 13px;
+    background-color: #f5f5f5;
+}
+
+/* Errores */
+#errores {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* Índice */
+#vistaPrevia nav {
+    background-color: #eaf2f8;
+    padding: 15px;
+    border-radius: 8px;
+}
+#vistaPrevia nav a {
+    color: #245b83;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    .acciones button {
+        flex: 1;
+    }
+    .botones button {
+        flex: 1 1 40%;
+    }
+}
+
+/* Estilo del enlace CTA */
+#vistaPrevia .cta {
+    display: inline-block;
+    background-color: #287a58;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#vistaPrecia .cta:hover {
+    background-color: #19583e;
+}

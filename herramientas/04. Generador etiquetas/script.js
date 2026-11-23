@@ -127,7 +127,7 @@ function generarEtiquetas() {
     const imagenPublica = "https://www.tudominio.com/imagen.jpg"
 
     let etiquetas = "";
-    etiquetas += "<!-- OPEN GRAPH -->/n";
+    etiquetas += "<!-- OPEN GRAPH -->\n";
     etiquetas += '<meta property="og:title" content="' + t + '">\n';
     etiquetas += '<meta property="og:descripcion" content="' + d + '">\n';
     etiquetas += '<meta property="og:url" content="' + u + '">\n';

@@ -26,9 +26,8 @@ function analizarTexto() {
     let totalSinEspacios = contenido.replace(/\s/g, "").length;
 
     //Contar frases
-    let listaFrases = contenido.match(/[^.!?]+[.!?]+[^.!?]+$/g);
-    let totalFrases = listaFrases ?
-      listaFrases.filter(frase => frase.trim() !== "").length : 0;
+    let listaFrases = contenido.match(/[^.!?]+[.!?]+/g);
+    let totalFrases = listaFrases ? listaFrases.length : 0;
 
     //Contar párrafos
     let totalParrafos = contenido.trim() === "" ? 0
