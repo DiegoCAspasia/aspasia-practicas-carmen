@@ -74,3 +74,65 @@ details p {
         min-height: 250px;
     }
 }
+
+/* Indicadores del informe SEO */
+.indicador {
+    float: right;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+/* Estado correcto */
+.verde {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Estado que necesita revisión */
+.naranja {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Estado con problemas */
+.rojo {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Contenido desplegado */
+.contenido-seccion {
+    padding: 10px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Listado de imágenes */
+.imagen-item {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #d5e2ec;
+}
+
+/* Texto de imágenes sin atributo alt */
+.texto.error {
+    color: #b02a37;
+    font-weight: bold;
+}
+
+/* Listado de enlaces */
+.enlace-item {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #d5e2ec;
+    overflow-wrap: anywhere;
+}
+.enlace-item p {
+    margin: 5px 0;
+}
