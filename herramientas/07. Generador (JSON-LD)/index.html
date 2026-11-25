@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador (JSON-LD)</title>
+    <!--Enlace a estilos CSS-->
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+    <main>
+        <h1>Generador de datos estructurado</h1>
+        <p class="intro">Genera marcado Schema.org en formato JSON-LD
+            para cursos, preguntas frecuentes, artículos y rutas de navegación.
+        </p>
+
+        <section class="seleccion">
+            <h2>Tipo de marcado</h2>
+            <label for="tipoSchema">Selecciona el tipo de contenido:</label>
+            <select id="tipoSchema">
+                <option value="">Selecciona una opcion</option>
+                <option value="Course">Curso</option>
+                <option value="FaQPage">Preguntas frecuentes</option>
+                <option value="Article">Artículo</option>
+                <option value="BreadcrumbList">Ruta de navegación</option>    
+            </select>
+        </section>
+        <section id="formularioSchema">
+            <p id="mensaje">Selecciona un tipo de marcado para mostrar el 
+                formulario correspondiente.
+            </p>
+        </section>
+        <section id="resultado">
+            <h2>Resultado JSON-LD</h2>
+            <textarea id="codigoJSON" readonly 
+                 placeholder="Aquí aparecerá el código generado....">
+            </textarea>
+            <button type="button" id="copiar">Copiar código</button>
+        </section>
+    </main>
+
+    <!--Enlace a archivos JavaScript-->
+    <script type="module" src="script.js"></script>
+   
+    
+</body>
+</html>
