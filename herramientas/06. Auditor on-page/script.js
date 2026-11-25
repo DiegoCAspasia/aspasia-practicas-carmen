@@ -61,7 +61,6 @@ function analizarPagina() {
     const documento = parser.parseFromString(html, "text/html");
 
     // Comprobamos que se ha creado el documento
-    console.log(documento);
     mensaje.textContent = "HTML recibido y preparado para analizar.";
 
     // Extraer el título de la página
@@ -232,9 +231,6 @@ const contenidoImagenes = `
 
 // Extraer todos los enlaces
 const enlaces = documento.querySelectorAll("a[href]");
-console.log("Dominio:", url.origin);
-console.log("Cantidad de enlaces:", enlaces.length);
-console.log("Enlaces encontrados:", Array.from(enlaces).map(enlace => enlace.href));
 
 // Contadores de enlaces
 let enlacesInternos = 0;
@@ -310,7 +306,41 @@ const contenidoEnlaces = `
     ${listaExternos || "<p>No se han encontrado enlaces externos.</p>"}
     `;
 
-// Preparar el contenido de cada apartado
+// Extraer las etiquetas hreflang
+const etiquetasHreflang = documento.querySelectorAll(`link[rel~="alternate"][hreflang]`
+    );
+
+// Comprobar el estado de las etiquetas
+let estadoHreflang = "verde";
+
+// Crear el listado de etiquetas
+let listaHreflang = "";
+etiquetasHreflang.forEach((etiqueta, indice) => {
+    const idioma = etiqueta.getAttribute("hreflang") || "";
+    const href = etiqueta.getAttribute("href") || "";
+
+// Comprobar que tiene idioma y URL
+if (idioma.trim() === "" || href.trim() === "") {
+    estadoHreflang = "rojo";
+}
+listaHreflang += `
+    <div class="enlace-item">
+        <p><strong>Etiqueta ${indice + 1}</strong></p>
+        <p><strong>Idioma:</strong> ${escaparHTML(idioma || "No especificado")}</p>
+        <p><strong>URL:</strong> ${escaparHTML(href || "No especificada")}</p>
+    </div>
+  `;
+});
+
+// Preparar el contenido de hreflang
+const contenidoHreflang = `
+    <p><strong>Total de etiquetas:</strong> ${etiquetasHreflang.length}</p>
+    <div>
+        ${listaHreflang || "No se han encontrado etiquetas hreflang."}
+    </div>
+`;
+
+// Preparar el contenido de cada apartadoS
 const contenidoTitle = `
     <p><strong>Título:</strong> ${escaparHTML(title || "No encontrado")}</p>
     <p><strong>Longitud:</strong> ${longitudTitle} caracteres</p>
@@ -338,6 +368,7 @@ informe.innerHTML = `
      ${crearSeccion("Encabezados H1-H6", estadoEncabezados, contenidoEncabezados)}
      ${crearSeccion("Imágenes", estadoImagenes, contenidoImagenes)}
      ${crearSeccion("Enlaces internos y externos", "verde", contenidoEnlaces)}
+     ${crearSeccion("Etiquetas hreflang", estadoHreflang, contenidoHreflang)}
     `;    
 }
 
